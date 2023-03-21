@@ -3,6 +3,7 @@ let canvas
 let color
 let size
 let bubble=[]
+let div_height
 function selectt(cname)
 {
   return document.querySelector(cname);
@@ -14,7 +15,7 @@ function setup()
   // canvas(650,650)
   let elt = selectt('#canvas-wrapper');
   console.log("hii")
-  canvas =createCanvas(650,650);
+  canvas =createCanvas(window.innerWidth, window.innerHeight-div_height-6);
   canvas.parent(elt)
   background(255)
 
@@ -68,9 +69,11 @@ selectt("#saveC").addEventListener("click",()=>{
 })
 
 
+div_height = document.getElementsByClassName('controls')[0].offsetHeight;
 function draw()
 {  
-
+ 
+// background(255)
 for(var i=0;i<bubble.length;i++)
     {
       bubble[i].display();
