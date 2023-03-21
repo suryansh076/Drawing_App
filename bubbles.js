@@ -2,7 +2,7 @@ let type
 let canvas
 let color
 let size
-let bubble=[]
+
 let div_height
 function selectt(cname)
 {
@@ -29,7 +29,6 @@ function mouseDragged(){
   let pencil=selectt('#pen-pencil').checked;
   let brush=selectt('#pen-brush').checked;
   let deletes=selectt('#pen-delete').checked;
-  let highlight=selectt('#pen-high').checked;
   let size=parseInt(selectt('#pen-size').value);
   color=selectt('#pen-color').value;
   fill(color)
@@ -74,38 +73,6 @@ function draw()
 {  
  
 // background(255)
-for(var i=0;i<bubble.length;i++)
-    {
-      bubble[i].display();
-      if(bubble[i].life<2)
-      {
-        console.log("poped",bubble.length)
-        bubble.splice(0,2)
-      }
-    }
+
 }
 
-function Bubble(x,y)
-{
-  
-  this.col=color
-  this.x=x;
-  this.y=y;
-  this.life=255
-  this.display=function()
-  {
-    noStroke()
-    fill(120,this.life)
-    ellipse(this.x,this.y,12,12)
-    this.life=this.life-5.5;
-  };
-  this.clicked=function()
-  {
-   var d=dist(this.x,this.y,mouseX,mouseY);
-    if(d<16)
-      {
-        this.col=color(155,50,78)
-      }
-  }
-  
-}
