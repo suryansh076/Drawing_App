@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sketch</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="font" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
+
+<body>
+  <div class="app">
+    <div class="controls">
+      <div class="title">Sketch</div>
+      <div class="type">
+        <!-- <input type="radio" name="pen-type" id="pen-pencil" checked>
+        <label for="pen-pencil">
+          <i class="fa fa-pencil"></i>
+        </label>
+        <input type="radio" name="pen-type" id="pen-brush" checked>
+        <label for="pen-brush">
+          <i class="fa fa-paint-brush"></i>
+        </label>
+        <input type="radio" name="pen-delete" id="pen-delete" checked>
+        <label for="pen-delete">
+          <i class="fa fa-trash"></i>
+        </label>
+        <input type="radio" name="pen-deleteq" id="pen-deleteq" >
+        <label for="pen-deleteq">
+          <i class="fa fa-trash"></i>
+        </label>
+        <input type="radio" name="pen-deletee" id="pen-deletee" >
+        <label for="pen-deletee">
+          <i class="fa fa-trash"></i>
+        </label> -->
+
+
+        <input type="radio" name="pen-type" id="pen-pencil" >
+        <label for="pen-pencil"><i class="fa fa-pencil"></i></label>
+        <input type="radio" name="pen-type" id="pen-brush" >
+        <label for="pen-brush"><i class="fa fa-paint-brush"></i></label>
+        <input type="radio" name="pen-type" id="pen-delete" >
+        <label for="pen-delete"><i class="fa fa-trash"></i></label>
+        <input type="radio" name="pen-type" id="pen-high" >
+        <label for="pen-high"><i class="fa-solid fa-highlighter"></i></label>
+
+
+      </div>
+      <div class="size">
+        <label for="pen-size">Size</label>
+        <input type="range" id="pen-size" min="1" max="50">
+      </div>
+      <div class="color">
+        <label for="pen-color">Color</label>
+        <input type="color" id="pen-color" value="#000">
+      </div>
+      <div class="action">
+        <button id="resetC">Camvas</button>
+        <button id="saveC">Save</button>
+      </div>
+
+    </div>
+    <div id="canvas-wrapper"></div>
+  </div>
+  <script src="bubbles.js"></script>
+</body>
+
+</html>
