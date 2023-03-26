@@ -3,7 +3,7 @@ let canvas
 let color
 let size
 
-let div_height
+let div_height=40
 function selectt(cname)
 {
   return document.querySelector(cname);
@@ -38,13 +38,18 @@ function mouseDragged(){
     line(pmouseX,pmouseY,mouseX,mouseY)
   }
   else if(brush){
-    ellipse(mouseX,mouseY,size,size)
+    stroke(color)
+    strokeWeight(size)
+
+    line(pmouseX,pmouseY,mouseX,mouseY)
   }
   else if(deletes)
   {
-    fill(255)
-    noStroke()
-    ellipse(mouseX,mouseY,size,size)
+    // fill(255)
+    stroke(255)
+    strokeWeight(size)
+
+    line(pmouseX,pmouseY,mouseX,mouseY)
 
   }
   else if(highlight)
@@ -75,4 +80,8 @@ function draw()
 // background(255)
 
 }
+
+
+/////
+
 
