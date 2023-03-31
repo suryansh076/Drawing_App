@@ -227,7 +227,7 @@ body{
 }
 
 
-@media screen and (min-width:340px) {
+@media screen and (max-width:760px) {
   .app .controls{
     width: 97%;
     left: 1%;
