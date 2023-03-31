@@ -80,7 +80,7 @@ body{
 .bottom_buttons {
   position: absolute;
  
- margin: 0 8px;
+ margin: 0 0px;
 
  padding-left: 2px;
   /* border: 2px solid yellow; */
@@ -227,7 +227,7 @@ body{
 }
 
 
-@media screen and (max-width:760px) {
+@media screen and (max-width:200px) {
   .app .controls{
     width: 97%;
     left: 1%;
