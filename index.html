@@ -20,58 +20,36 @@
 <body>
   <div class="app">
     <div class="controls">
-      <div class="title">Sketch</div>
       <div class="type">
-        <!-- <input type="radio" name="pen-type" id="pen-pencil" checked>
-        <label for="pen-pencil">
-          <i class="fa fa-pencil"></i>
-        </label>
-        <input type="radio" name="pen-type" id="pen-brush" checked>
-        <label for="pen-brush">
-          <i class="fa fa-paint-brush"></i>
-        </label>
-        <input type="radio" name="pen-delete" id="pen-delete" checked>
-        <label for="pen-delete">
-          <i class="fa fa-trash"></i>
-        </label>
-        <input type="radio" name="pen-deleteq" id="pen-deleteq" >
-        <label for="pen-deleteq">
-          <i class="fa fa-trash"></i>
-        </label>
-        <input type="radio" name="pen-deletee" id="pen-deletee" >
-        <label for="pen-deletee">
-          <i class="fa fa-trash"></i>
-        </label> -->
-
-
-        <input type="radio" name="pen-type" id="pen-pencil" >
-        <label for="pen-pencil"><i class="fa fa-pencil"></i></label>
-        <input type="radio" name="pen-type" id="pen-brush" >
-        <label for="pen-brush"><i class="fa fa-paint-brush"></i></label>
-        <!-- <input type="radio" name="pen-type" id="pen-high" >
-        <label for="pen-high"><i class="fa-solid fa-highlighter"></i></label> -->
+        <input type="radio" name="pen-type" id="pen-pencil" checked >
+        <label for="pen-pencil" onclick=show_col()><i class="fa fa-pencil"></i></label>
+        <input type="radio" name="pen-type" id="pen-brush"  >
+        <label for="pen-brush" onclick=show_col()><i class="fa fa-paint-brush"></i></label>
+        <input type="radio" name="pen-type" id="pen-high" >
+        <label for="pen-high"  onclick=show_col()><i class="fa-solid fa-highlighter"></i></label>
         <input type="radio" name="pen-type" id="pen-delete" >
-        <label for="pen-delete"><i class="fa fa-trash"></i></label>
-        
-
+        <label for="pen-delete" onclick=hide_col()><i class="fa-solid fa-eraser"></i></label>
+        <label class = "theme-switcher" onclick=theme()><i class="fa-solid fa-moon"></i></label>
       </div>
-      <div class="size">
-        <label for="pen-size">Size</label>
-        <input type="range" id="pen-size" min="1" max="50">
-      </div>
-      <div class="color">
-        <label for="pen-color">Color</label>
-        <input type="color" id="pen-color" value="#000">
-      </div>
-      <div class="action">
-        <button id="resetC">Reset</button>
-        <button id="saveC">Save</button>
-      </div>
+        <div class="size">
+          <!-- <label for="pen-size">Size</label> -->
+          <input type="range" id="pen-size" min="1" max="50">
+        </div>
+        <div class="bottom_buttons">
+          <div class="color" id="choosedColor">
+            <label  for="pen-color">Color</label>
+            <input type="color" id="pen-color" value="#4169E1">
+          </div>
+          <div class="action">
+            <button id="resetC">Reset</button>
+            <button id="saveC">Save</button>
+          </div>
+        </div>
 
     </div>
     <div id="canvas-wrapper"></div>
   </div>
-  <script src="bubbles.js"></script>
+  <script src="sketch.js"></script>
 </body>
 
 </html>

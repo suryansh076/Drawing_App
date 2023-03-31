@@ -1,7 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family:sans-serif;
+
 }
 body{
   background: #383636;
@@ -17,28 +23,147 @@ body{
   transform: translate(-50%,-50%);
   width: 650px;
   height: 650px; */
+  /* border: 2px solid cornflowerblue; */
+  user-select: none;
   overflow: hidden;
-
-
-}
-.controls
-{
-  height:fit-content;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100vw;
-  min-width: 18rem;
   align-items: center;
-  background:#ddd;
-  padding: 0px,10px;
+  /* position: absolute */
+  display: flex;
+  width: 100%;
+
+  
 }
-.app .controls .type,
+.app .controls
+{
+  position: absolute;
+  width:25%;
+  text-align: center;
+  height:5rem;
+  padding: .5rem .5rem;
+/* margin: auto; */
+  border-radius: .5rem;
+  /* border:#ccc 1px solid; */
+  display: flex;
+  /* flex-direction: column; */
+  top:5px;
+  left:37%;
+  /* flex-wrap: wrap; */
+  /* max-width: 100vw;
+  min-width: 80%; */
+  background:#eee;
+  padding: 0px,10px;
+  z-index :100;
+}
+
+
+
+.title{
+
+  width: 50%;
+  color: #383636;
+  font-weight: 500;
+  padding:0 .5rem;
+}
+
+.type {
+  border: 1px solid #bbb;
+  border: 0.1px solid rgba(137, 134, 134,0.2);
+  border-radius: .3rem;
+  width:59%; 
+  height: 4rem;
+  padding: .5rem .1rem;
+}
+.type i{
+  font-size:14px;
+}
+
+.bottom_buttons {
+  position: absolute;
+ 
+ margin: 0 8px;
+
+ padding-left: 2px;
+  /* border: 2px solid yellow; */
+  display: flex;
+  flex-direction: flex-start;
+  position: relative;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.action button {
+  display: flex;
+  margin: 8px auto;
+  background-color:#1575b0;
+  color: #fff;
+  border-radius: .2rem;
+  box-shadow: 0 0 0;
+  border: 0;
+}
+
+.size {
+  position: absolute;
+  left: -0rem;
+  top:3.2rem;
+  width: 55%;
+}
+.size input {
+  width: 80%;
+}
+
+.color  {
+  /* display: flex;
+  flex-direction: row; */
+  width: 3rem;
+  height: 4rem;
+  padding: 0 0.2rem;
+  align-items: center;
+  border: 2px solid rgba(26, 38, 26,0.1);
+  border-radius: 5px;
+
+}
+.color label{
+  margin-right: .5rem;
+}
+
+.theme-switcher {
+  padding: .1rem .5rem;
+  margin: 0 .5rem;
+  border-radius: .3rem;
+  border: 1px solid #aaa;
+
+  /* background-color: yellow; */
+}
+
+#pen-color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  top:5px;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+}
+#pen-color::-webkit-color-swatch {
+  border-radius: .3rem;
+  border: none;
+}
+#pen-color::-moz-color-swatch {
+  border-radius: .3rem;
+  border: none;
+}
+
 .app .controls .size,
 .app .controls .color{
   margin: 0px 10px;
 }
 .app .controls .type input{
   display: none;
+
 }
 .app .controls .type label{
   width: 30px;
@@ -47,12 +172,14 @@ body{
   text-align: center;
   line-height: 30px;
   margin: 0px 2px;
+  user-select: none;
   cursor: pointer;
 }
 .app .controls .type input:checked+label{
-  background: #111;
+  background: #333;
   color:#eee;
-  border-radius:50%;
+  height: 28px;
+  border-radius:.4rem;
 }
 .app .app .controls .size input{
   height: 10px;
@@ -60,8 +187,52 @@ body{
 }
 .app .controls .action button{
   padding: 5px 10px;
+  text-align: center;
+  width: 3.5rem;
+  user-select: none;
   cursor:pointer;
+}
+.app .controls .type input{
+  font-size: 25px;
+  visibility:hidden;
+  z-index: 0;
+}
+#pen-pencil #pen-brush{
+  z-index: 10;
 }
 #canvas-wrapper{
   width: 100vh;
+}
+.removecolor{
+  /* background-color: red;
+  animation: hamburger_pulse 0.8s ease 1; */
+  /* display: none; */
+  visibility: hidden;
+}
+/* .controls .color{
+  opacity:1;
+  transform: scale(1);
+  transition: all 1s ease-out;
+} */
+@keyframes hamburger_pulse {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+  }
+
+  100% {
+      opacity: 0;
+      transform: scale(1.5);
+  }
+}
+
+
+@media screen and (min-width:340px) {
+  .app .controls{
+    width: 97%;
+    left: 1%;
+  }
+  .bottom_buttons{
+    margin: 0px -1px;
+  }
 }
