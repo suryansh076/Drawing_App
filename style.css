@@ -227,10 +227,19 @@ body{
 }
 
 
-@media screen and (max-width:200px) {
+@media screen and (min-width:350px) {
   .app .controls{
     width: 97%;
     left: 1%;
+  }
+  .bottom_buttons{
+    margin: 0px -1px;
+  }
+}
+@media screen and (min-width:1200px) {
+  .app .controls{
+    width: 25%;
+    left: 37%;
   }
   .bottom_buttons{
     margin: 0px -1px;

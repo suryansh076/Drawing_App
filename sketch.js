@@ -9,6 +9,7 @@ let brush;
 let deletes;
 let highlight;
 let size;
+let eColor=255
 let isdark=false
 function selectt(cname)
 {
@@ -43,7 +44,7 @@ function mouseDragged(){
   else if(deletes)
   {
     console.log(colors)
-    stroke(255)
+    stroke(eColor)
     strokeWeight(size)
     line(pmouseX,pmouseY,mouseX,mouseY)
   }
@@ -98,6 +99,7 @@ theme=()=>{
   if(isdark)
   {
     background(20); 
+    eColor=20
     controls.innerHTML = `<i class="fa-solid fa-sun"></i>`
     colors.style.border = `1px solid #555`
     type.style.border = `1px solid #555`
@@ -107,6 +109,7 @@ theme=()=>{
   }
   else{
     background(255)
+    eColor=255
     controls.innerHTML = `<i class="fa-solid fa-moon"></i>`
     colors.style.border = `1px solid #ddd`
     type.style.border = `1px solid #ddd`
